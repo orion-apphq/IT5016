@@ -4,7 +4,7 @@
 import _thread #imports the threading API module so we can work with multiple threads at once
 from time import sleep #imports the sleep function from the time module
 
-items = [2, 4, 5, 2.5, 1, 7] # define list of integers to be sorted
+items = [2, 4, 5, 2, 1, 7] # define list of integers to be sorted
 
 def sleep_sort(n): # define sleep_sort to be a function with parameter n where n is an int from the list to be sorted
         sleep(n) # pauses the function for n amount of time
