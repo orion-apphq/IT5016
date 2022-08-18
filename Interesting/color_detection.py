@@ -8,7 +8,8 @@ ap.add_argument('-i', '--image', required=True, help="Image Path")  # the progra
 args = vars(ap.parse_args())                                        # to set the path of the image file that is displayed. When starting the program the 
 img_path = args['image']                                            # command looks like this: python color_detection.py -i C:/<PATH_TO_IMAGE>
 
-img = cv2.imread(img_path)        # This uses the cv2 module to read the img and save it into a variable img
+img = cv2.imread(img_path)        # This uses the cv2 module to read the img and save it into a variable img as a list of y values containing 
+                                  # a list of x values containing a list of the rgb values of each pixel - this is really cool  
 
 # global variables are declared here, they are used later on in the program inside a function which is why they are declared globally
 clicked = False # clicked is used to keep a record of if the image has been clicked
