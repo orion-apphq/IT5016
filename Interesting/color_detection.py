@@ -51,7 +51,7 @@ def draw_function(event, x,y,flags,param):
         ypos = y # sets ypos to the value of y, where y is the position of the mouse on the y axis inside the image window
         b,g,r = img[y,x] # the img var is a list containing lists containing lists where the color values of each pixel is saved 
                          # - img[y,x] searches through the y list by index then searches for the x value and returns the color values of that pixel as 
-                         # type class
+                         # a class from the numpy package
         b = int(b) # this sets the values to be of type int
         g = int(g)
         r = int(r)
