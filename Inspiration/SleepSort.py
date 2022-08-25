@@ -13,3 +13,5 @@ def sleep_sort(n): # define sleep_sort to be a function with parameter n where n
 for i in items: # loops over each item in the list
         arg_tuple = (i,)
         _thread.start_new_thread(sleep_sort, arg_tuple) # starts a new thread for each item in list then runs the sleep_sort function on it
+                                                        # each new thread runs along side each other simultaneously, meaning the sleep_sort functions 
+                                                        # print in the order of the value of the items
