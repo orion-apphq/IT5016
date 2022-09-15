@@ -1,6 +1,7 @@
 import csv #Import CSV reading module
 
 # Global Variable Declaration
+Loop = True
 invalid = True
 wordList = []
 isAlphaList = []
@@ -27,7 +28,7 @@ with open('C:/Users/Learner Me/PycharmProjects/udemy/ascii-binary.csv') as csv_f
                                      # index
                 return row_two[0]
             
-    while True: # Just keeps looping through over and over until the program is closed
+    while Loop: # Just keeps looping through over and over until "exit" is input
         
         # This while loop here checks the user is inputting compatible strings and sanitizing the inputted data
         while invalid:
@@ -35,6 +36,9 @@ with open('C:/Users/Learner Me/PycharmProjects/udemy/ascii-binary.csv') as csv_f
             print('only use characters a-z, and space') # Prints a message to the user, telling them which characters are valid
             userString = input("Enter characters: ") # Creates a variable userString and asks the user to input the characters which are saved into it
             userString = userString.casefold() # .casefold turns all the characters in a string to lowercase - we then save that back into userString
+            if userString == "exit":
+              Loop = False
+              break;
             wordList = userString.split() # This splits the string on " " (space) and saves each word as a string item in a list
             for word in wordList: # This loops through each word in the list of words the user inputted
                 isAlphaList.append(word.isalpha()) # .isalpha checks if the string only contains characters from the alphabet and returns True or False
